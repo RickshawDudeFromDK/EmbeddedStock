@@ -1,0 +1,84 @@
+﻿@model EmbeddedStock.Models.Loan.LoanViewModel
+
+@{
+    ViewBag.Title = "Show Loan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Show Loan</h2>
+@Html.Partial("~/Views/Component/ComponentMenu.cshtml")
+<hr/>
+<div class="row">
+    <div class="col-md-2">
+        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label" })
+    </div>
+    <div class="col-md-10">
+        @Model.Name
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        @Html.LabelFor(model => model.StudentNumber, htmlAttributes: new { @class = "control-label" })
+    </div>
+    <div class="col-md-10">
+        @Model.StudentNumber
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        @Html.LabelFor(model => model.TelephoneNumber, htmlAttributes: new { @class = "control-label" })
+    </div>
+    <div class="col-md-10">
+        @Model.TelephoneNumber
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label" })
+    </div>
+    <div class="col-md-10">
+        @Model.Email
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        @Html.LabelFor(model => model.Component.ComponentNumber, htmlAttributes: new { @class = "control-label" })
+    </div>
+    <div class="col-md-10">
+        @Model.Component.ComponentNumber
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        @Html.LabelFor(model => model.LoanDate, htmlAttributes: new { @class = "control-label" })
+    </div>
+    <div class="col-md-10">
+        @Model.LoanDate
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        @Html.LabelFor(model => model.ReturnDate, htmlAttributes: new { @class = "control-label" })
+    </div>
+    <div class="col-md-10">
+        @Model.ReturnDate
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        @Html.LabelFor(model => model.IsEmailSent, htmlAttributes: new { @class = "control-label" })
+    </div>
+    <div class="col-md-10">
+        @Model.IsEmailSent
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        @using (Html.BeginForm("ReturnLoan", "Loan", FormMethod.Post))
+        {
+            @Html.HiddenFor(model => model.Id)
+            <input type="submit" value="Return loan" class="btn btn-default" />
+        }
+    </div>
+</div>
+<br/>

@@ -1,0 +1,174 @@
+﻿@model EmbeddedStock.Models.ShowComponentsViewModel
+
+@{
+    ViewBag.Title = "Show Components";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Show Components</h2>
+
+@Html.Partial("ComponentMenu")
+
+<div class="col-md-12">
+    <br />
+    <br />
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Component.Type.ComponentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Component.ComponentNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Component.Type.Category.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Component.Type.ComponentInfo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Component.Type.SerialNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Component.Type.ManufacturerLink)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Component.Type.DataSheet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Component.Type.ImageByte)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Component.AdminComment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Component.UserComment)
+            </th>
+            <th>
+                Loan
+            </th>
+            <th>
+                
+            </th>
+            <th>
+
+            </th>
+        </tr>
+        @for (int i = 0; i < Model.Components.Count(); i++)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => Model.Components[i].Type.ComponentName)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => Model.Components[i].ComponentNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => Model.Components[i].Type.Category.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => Model.Components[i].Type.ComponentInfo)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => Model.Components[i].Type.SerialNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => Model.Components[i].Type.ManufacturerLink)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => Model.Components[i].Type.DataSheet)
+                </td>
+                <td>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#@("modal" + i)">
+                        Show
+                    </button>
+
+                    <!-- Modal -->
+                    <!-- Id's of the modal and the image have to be different, otherwise they will be treated as the same-->
+                    <div class="modal fade" id="@("modal" + i)" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Component Image</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <img id="@("img" + i)" width="400" height="300" src="data:image;base64,@System.Convert.ToBase64String(Model.Components[i].Type.ImageByte)" />
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    @Html.DisplayFor(model => Model.Components[i].AdminComment)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => Model.Components[i].UserComment)
+                </td>
+                <td>
+                    @{
+                        if (Model.Components[i].Loaner == null)
+                        {
+                            <a href="@Url.Action("AddLoan", "Loan", new { componentId = Model.Components[i].Id })" class="btn btn-default">Add Loaner</a>
+                        }
+                        else
+                        {
+                            <a href="@Url.Action("ShowLoan", "Loan", new { loanerId = Model.Components[i].Loaner.Id })" class="btn btn-default">Show Loan</a>
+                        }
+                    }
+                    
+                </td>
+                <td>
+                    <a href="@Url.Action("EditComponent", new{id = Model.Components[i].Id})" class="btn btn-warning">Edit</a>
+                </td>
+                    
+                <td>
+                    @using (Html.BeginForm("DeleteComponent", "Component", FormMethod.Post))
+                    {
+                        <input type="hidden" value="@Model.Components[i].Id" name="Id" />
+                                <input type="submit" class="btn btn-danger" value="Delete" onclick="return confirm('Delete component?');">
+                    }
+                </td>
+            </tr>
+        }
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+            <td colspan="3">
+                <div class="pull-right">
+                    @{
+                        if (ViewBag.viewType == "ByCategory")
+                        {
+                            @Html.PageLinks(Model.PagingInfo, x => Url.Action("ShowComponentsInCategory", new { id = Model.Components[0].Type.CategoryId, page = x }))
+                        }
+                        else if (ViewBag.viewType == "LoanedComponents")
+                        {
+                            @Html.PageLinks(Model.PagingInfo, x => Url.Action("ShowLoanedComponents", new { page = x }))
+                        }
+                        else
+                        {
+                            @Html.PageLinks(Model.PagingInfo, x => Url.Action("ShowComponents", new { page = x }))
+                        }
+                    }
+                   
+                </div>
+            </td>
+        </tr>
+
+    </table>
+
+</div>
+

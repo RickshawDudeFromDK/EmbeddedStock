@@ -1,0 +1,158 @@
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\roslyn\csc.exe
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\roslyn\System.Collections.Immutable.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\roslyn\vbc.exe
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\roslyn\VBCSCompiler.exe
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\roslyn\VBCSCompiler.exe.config
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\EmbeddedStock.dll.config
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\EmbeddedStock.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\EmbeddedStock.pdb
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Antlr3.Runtime.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\EntityFramework.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\EntityFramework.SqlServer.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.Owin.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.Owin.Security.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.Owin.Security.Google.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.Web.Infrastructure.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Newtonsoft.Json.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Owin.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\System.Web.Helpers.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\System.Web.Mvc.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\System.Web.Optimization.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\System.Web.Razor.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\System.Web.WebPages.Deployment.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\System.Web.WebPages.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\System.Web.WebPages.Razor.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\WebGrease.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\System.Web.Helpers.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\System.Web.Mvc.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\System.Web.Optimization.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\System.Web.Razor.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\System.Web.WebPages.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\System.Web.WebPages.Deployment.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\System.Web.WebPages.Razor.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Antlr3.Runtime.pdb
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Newtonsoft.Json.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\EntityFramework.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\EntityFramework.SqlServer.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.Owin.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.Owin.Security.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.Owin.Security.Google.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\obj\Debug\EmbeddedStock.csprojResolveAssemblyReference.cache
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\obj\Debug\EmbeddedStock.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\obj\Debug\EmbeddedStock.pdb
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\EmbeddedStock.DataAccess.exe
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\EmbeddedStock.DataAccess.pdb
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Ninject.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Ninject.Web.Common.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Ninject.Web.Mvc.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\WebActivatorEx.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Ninject.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Ninject.Web.Common.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock\bin\Ninject.Web.Mvc.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\roslyn\csc.exe
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\roslyn\vbc.exe
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\roslyn\VBCSCompiler.exe
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\EmbeddedStock.dll.config
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\EmbeddedStock.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\EmbeddedStock.pdb
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Antlr3.Runtime.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\EmbeddedStock.DataAccess.exe
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\EntityFramework.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\EntityFramework.SqlServer.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.Owin.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.Owin.Security.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Newtonsoft.Json.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Ninject.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Ninject.Web.Common.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Ninject.Web.Mvc.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Owin.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\System.Web.Helpers.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\System.Web.Mvc.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\System.Web.Optimization.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\System.Web.Razor.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\System.Web.WebPages.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\System.Web.WebPages.Razor.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\WebActivatorEx.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\WebGrease.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\EmbeddedStock.DataAccess.pdb
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Ninject.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Ninject.Web.Common.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Ninject.Web.Mvc.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\System.Web.Helpers.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\System.Web.Mvc.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\System.Web.Optimization.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\System.Web.Razor.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\System.Web.WebPages.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\System.Web.WebPages.Razor.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Antlr3.Runtime.pdb
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Newtonsoft.Json.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\EntityFramework.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\EntityFramework.SqlServer.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.Owin.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.Owin.Security.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\obj\Debug\EmbeddedStock.csprojResolveAssemblyReference.cache
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\obj\Debug\EmbeddedStock.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\obj\Debug\EmbeddedStock.pdb
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\AutoMapper.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock\bin\AutoMapper.xml

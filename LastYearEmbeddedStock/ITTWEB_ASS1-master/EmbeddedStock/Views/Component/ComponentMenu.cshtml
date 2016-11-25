@@ -1,0 +1,41 @@
+﻿<div class="dropdown div-inline">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+        Category
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="@Url.Action("AddComponentCategory", "Component")">Add Component Category</a></li>
+        <li><a href="@Url.Action("ShowCategories", "Component")">Show Categories</a></li>
+    </ul>
+</div>
+<div class="dropdown div-inline">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+        Type
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="@Url.Action("AddComponentType", "Component")">Add Component Type</a></li>
+        <li><a href="@Url.Action("ShowTypes", "Component")">Show Types</a></li>
+    </ul>
+</div>
+<div class="dropdown div-inline">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+        Component
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="@Url.Action("AddComponent", "Component")">Add Component</a></li>
+        <li><a href="@Url.Action("SearchComponent", "Component")">Search For Component</a></li>
+        <li><a href="@Url.Action("ShowComponents", "Component")">Show Components</a></li>
+    </ul>
+</div>
+<div class="dropdown div-inline">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+        Loans
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="@Url.Action("ShowLoanedComponents", "Component")">Show Loaned Components</a></li>
+        <li><a href="@Url.Action("SendMailToLateLoaners", "Loan")" onclick="return confirm('Send emails?');">Send Mail To Late Loaners</a></li>
+    </ul>
+</div>

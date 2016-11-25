@@ -1,0 +1,16 @@
+﻿@model EmbeddedStock.Models.InfoPageViewModel
+
+@{
+    ViewBag.Title = "About";
+    <div class="margin-top-5 row">
+        @Html.Raw(System.Web.HttpUtility.HtmlDecode(Model.PageContent))
+    </div>
+    <div class="row margin-top-5">
+       @if (Context.User.Identity.IsAuthenticated)
+       {
+         <a href="@Url.Action("EditAbout", "Home")" class="btn btn-default margin-top-5">Edit</a>
+       }
+    </div>
+
+}
+

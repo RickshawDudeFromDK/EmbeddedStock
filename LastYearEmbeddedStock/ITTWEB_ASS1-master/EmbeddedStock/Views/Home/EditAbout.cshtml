@@ -1,0 +1,33 @@
+﻿@model EmbeddedStock.Models.InfoPageViewModel
+
+@{
+    ViewBag.Title = "EditAbout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit About</h2>
+
+@using (Html.BeginForm("EditAbout", "Home", FormMethod.Post)) { 
+
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-12">
+                @Html.LabelFor(model => model.PageContent, htmlAttributes: new { @class = "control-label" })
+            </div>
+         </div>
+       <div class="row">
+           <div class="col-md-12">
+               @Html.TextAreaFor(model => model.PageContent, new { rows = "15", @class = "form-control fill-width" })
+               @Html.HiddenFor(model => model.Id)
+           </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <input type="submit" value="Save changes" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+       
+       
+        }
+

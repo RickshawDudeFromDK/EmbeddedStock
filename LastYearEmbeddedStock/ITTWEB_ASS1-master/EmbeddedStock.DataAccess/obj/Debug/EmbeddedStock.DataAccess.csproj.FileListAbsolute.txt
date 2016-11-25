@@ -1,0 +1,44 @@
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock.DataAccess\bin\Debug\EmbeddedStock.DataAccess.exe.config
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock.DataAccess\bin\Debug\EmbeddedStock.DataAccess.exe
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock.DataAccess\bin\Debug\EmbeddedStock.DataAccess.pdb
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock.DataAccess\bin\Debug\EntityFramework.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock.DataAccess\bin\Debug\EntityFramework.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock.DataAccess\obj\Debug\EmbeddedStock.DataAccess.csprojResolveAssemblyReference.cache
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock.DataAccess\obj\Debug\EmbeddedStock.DataAccess.exe
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock.DataAccess\obj\Debug\EmbeddedStock.DataAccess.pdb
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock.DataAccess\obj\Debug\EmbeddedStock.DataAccess.Migrations.Initial.resources
+c:\users\jacob\documents\visual studio 2015\Projects\EmbeddedStock\EmbeddedStock.DataAccess\obj\Debug\EmbeddedStock.DataAccess.csproj.GenerateResource.Cache
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock.DataAccess\bin\Debug\EmbeddedStock.DataAccess.exe.config
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock.DataAccess\bin\Debug\EmbeddedStock.DataAccess.exe
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock.DataAccess\bin\Debug\EmbeddedStock.DataAccess.pdb
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock.DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock.DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock.DataAccess\obj\Debug\EmbeddedStock.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock.DataAccess\obj\Debug\EmbeddedStock.DataAccess.Migrations.Initial.resources
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock.DataAccess\obj\Debug\EmbeddedStock.DataAccess.csproj.GenerateResource.Cache
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock.DataAccess\obj\Debug\EmbeddedStock.DataAccess.exe
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock.DataAccess\obj\Debug\EmbeddedStock.DataAccess.pdb
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock.DataAccess\obj\Debug\EmbeddedStock.DataAccess.Migrations.ChangedUserToLoaner.resources
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock.DataAccess\obj\Debug\EmbeddedStock.DataAccess.Migrations.dunno.resources
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock.DataAccess\obj\Debug\EmbeddedStock.DataAccess.Migrations.AddedHasBeenReturnedToLoanInformation.resources
+C:\Users\Jacob\Source\Repos\ITTWEB_ASS1\EmbeddedStock.DataAccess\obj\Debug\EmbeddedStock.DataAccess.Migrations.RemovedHasBeenReturnAgain.resources
+C:\Users\PIRATE1\Desktop\Webudvikling Obligatoriske opgaver\ITTWEB_ASS1-master\ITTWEB_ASS1-master\EmbeddedStock.DataAccess\bin\Debug\EmbeddedStock.DataAccess.exe.config
+C:\Users\PIRATE1\Desktop\Webudvikling Obligatoriske opgaver\ITTWEB_ASS1-master\ITTWEB_ASS1-master\EmbeddedStock.DataAccess\bin\Debug\EmbeddedStock.DataAccess.exe
+C:\Users\PIRATE1\Desktop\Webudvikling Obligatoriske opgaver\ITTWEB_ASS1-master\ITTWEB_ASS1-master\EmbeddedStock.DataAccess\bin\Debug\EmbeddedStock.DataAccess.pdb
+C:\Users\PIRATE1\Desktop\Webudvikling Obligatoriske opgaver\ITTWEB_ASS1-master\ITTWEB_ASS1-master\EmbeddedStock.DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\PIRATE1\Desktop\Webudvikling Obligatoriske opgaver\ITTWEB_ASS1-master\ITTWEB_ASS1-master\EmbeddedStock.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PIRATE1\Desktop\Webudvikling Obligatoriske opgaver\ITTWEB_ASS1-master\ITTWEB_ASS1-master\EmbeddedStock.DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\PIRATE1\Desktop\Webudvikling Obligatoriske opgaver\ITTWEB_ASS1-master\ITTWEB_ASS1-master\EmbeddedStock.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PIRATE1\Desktop\Webudvikling Obligatoriske opgaver\ITTWEB_ASS1-master\ITTWEB_ASS1-master\EmbeddedStock.DataAccess\obj\Debug\EmbeddedStock.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\PIRATE1\Desktop\Webudvikling Obligatoriske opgaver\ITTWEB_ASS1-master\ITTWEB_ASS1-master\EmbeddedStock.DataAccess\obj\Debug\EmbeddedStock.DataAccess.Migrations.Initial.resources
+C:\Users\PIRATE1\Desktop\Webudvikling Obligatoriske opgaver\ITTWEB_ASS1-master\ITTWEB_ASS1-master\EmbeddedStock.DataAccess\obj\Debug\EmbeddedStock.DataAccess.Migrations.ChangedUserToLoaner.resources
+C:\Users\PIRATE1\Desktop\Webudvikling Obligatoriske opgaver\ITTWEB_ASS1-master\ITTWEB_ASS1-master\EmbeddedStock.DataAccess\obj\Debug\EmbeddedStock.DataAccess.Migrations.dunno.resources
+C:\Users\PIRATE1\Desktop\Webudvikling Obligatoriske opgaver\ITTWEB_ASS1-master\ITTWEB_ASS1-master\EmbeddedStock.DataAccess\obj\Debug\EmbeddedStock.DataAccess.Migrations.AddedHasBeenReturnedToLoanInformation.resources
+C:\Users\PIRATE1\Desktop\Webudvikling Obligatoriske opgaver\ITTWEB_ASS1-master\ITTWEB_ASS1-master\EmbeddedStock.DataAccess\obj\Debug\EmbeddedStock.DataAccess.Migrations.RemovedHasBeenReturnAgain.resources
+C:\Users\PIRATE1\Desktop\Webudvikling Obligatoriske opgaver\ITTWEB_ASS1-master\ITTWEB_ASS1-master\EmbeddedStock.DataAccess\obj\Debug\EmbeddedStock.DataAccess.csproj.GenerateResource.Cache
+C:\Users\PIRATE1\Desktop\Webudvikling Obligatoriske opgaver\ITTWEB_ASS1-master\ITTWEB_ASS1-master\EmbeddedStock.DataAccess\obj\Debug\EmbeddedStock.DataAccess.exe
+C:\Users\PIRATE1\Desktop\Webudvikling Obligatoriske opgaver\ITTWEB_ASS1-master\ITTWEB_ASS1-master\EmbeddedStock.DataAccess\obj\Debug\EmbeddedStock.DataAccess.pdb

@@ -1,0 +1,91 @@
+﻿@model EmbeddedStock.Models.ComponentViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+@Html.Partial("ComponentMenu")
+<br/>
+<br />
+<div class="row">
+    <div class="col-md-4">
+        @Html.LabelFor(model => model.ComponentNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+    </div>
+    <div class="col-md-8">
+        @Model.ComponentNumber
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        @Html.LabelFor(model => model.AdminComment, htmlAttributes: new { @class = "control-label col-md-2" })
+    </div>
+    <div class="col-md-8">
+        @Model.AdminComment
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        @Html.LabelFor(model => model.UserComment, htmlAttributes: new { @class = "control-label col-md-2" })
+    </div>
+    <div class="col-md-8">
+        @Model.UserComment
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        @Html.LabelFor(model => model.Type.ComponentName, htmlAttributes: new { @class = "control-label col-md-2" })
+    </div>
+    <div class="col-md-8">
+        @Model.Type.ComponentName
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        @Html.LabelFor(model => model.Type.ComponentInfo, htmlAttributes: new { @class = "control-label col-md-2" })
+    </div>
+    <div class="col-md-8">
+        @Model.Type.ComponentInfo
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        @Html.LabelFor(model => model.Type.DataSheet, htmlAttributes: new { @class = "control-label col-md-2" })
+    </div>
+    <div class="col-md-8">
+        @Model.Type.DataSheet
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        @Html.LabelFor(model => model.Type.SerialNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+    </div>
+    <div class="col-md-8">
+        @Model.Type.SerialNumber
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        @Html.LabelFor(model => model.Type.ManufacturerLink, htmlAttributes: new { @class = "control-label col-md-2" })
+    </div>
+    <div class="col-md-8">
+        @Model.Type.ManufacturerLink
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        @Html.LabelFor(model => model.Type.Category.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+    </div>
+    <div class="col-md-8">
+        @Model.Type.Category.Name
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        @Html.LabelFor(model => model.Type.ImageByte, htmlAttributes: new { @class = "control-label col-md-2" })
+    </div>
+    <div class="col-md-8">
+        <img width="400" height="300" src="data:image;base64,@System.Convert.ToBase64String(Model.Type.ImageByte )" />
+    </div>
+</div>
