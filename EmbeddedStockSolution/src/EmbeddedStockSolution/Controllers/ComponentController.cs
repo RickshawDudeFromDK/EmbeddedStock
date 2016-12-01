@@ -9,11 +9,11 @@ using EmbeddedStockSolution.ViewModels;
 
 namespace EmbeddedStockSolution.Controllers
 {
-    public class CategoryController : Controller
+    public class ComponentController : Controller
     {
         private IGeneriskRepository<Category> _categoryRepo;
         private IGeneriskRepository<ComponentType> _typeRepo;
-        public CategoryController(IGeneriskRepository<Category> catRepo, IGeneriskRepository<ComponentType> typeRepo)
+        public ComponentController(IGeneriskRepository<Category> catRepo, IGeneriskRepository<ComponentType> typeRepo)
         {
             _categoryRepo = catRepo;
             _typeRepo = typeRepo;
@@ -22,34 +22,45 @@ namespace EmbeddedStockSolution.Controllers
 
         public IActionResult Index()
         {
-            var cat = new Category();
-            cat.Name = "example";
-            cat.CategoryId = 1;
-            //needs list of all categories
-            ViewBag.list = new List<Category>{cat};
+            var cat = new ComponentViewModel();
+            cat.ComponentNumber = 1231345454;
+            //needs list of all component
+            cat.SerialNo = "12a3ds12a";
+            cat.ComponentId = 2;
+            var com = new ComponentType();
+            com.ComponentName = "hej";
+            com.ComponentTypeId = 1;
+            cat.ComponentType = com;
+            ViewBag.list = new List<ComponentViewModel>{cat};
             return View();
         }
 
         public IActionResult New()
         { 
+            var cat = new ComponentViewModel();
+            cat.ComponentNumber = 1231345454;
+            //needs list of all component
+            cat.SerialNo = "12a3ds12a";
+            cat.ComponentId = 2;
             var com = new ComponentType();
             com.ComponentName = "hej";
             com.ComponentTypeId = 1;
+            var com2 = new ComponentType();
+            com2.ComponentName = "hedsadasj";
+            com2.ComponentTypeId = 4;
             //requires list of all component types
-            ViewBag.list = new List<ComponentType>{com};
+            ViewBag.list = new List<ComponentType>{com, com2};
             return View();
         }
         
         [HttpPost]
-        public IActionResult Create(CategoryViewModel model)
+        public IActionResult Create(ComponentViewModel model)
         { 
             //needs to create a category and create the binding to the chosen componenttypes
-            var cat = new Category();
-            cat.Name = model.Name;
-            return RedirectToAction("", "category", new { area = "" });
+            return RedirectToAction("", "component", new { area = "" });
         }
 
-        [HttpGet("{category}/[action]/{id}")]
+        [HttpGet("[controller]/[action]/{id}")]
         public IActionResult Show(string id)
         {
             //needs to find a category with its componenttype names in the list

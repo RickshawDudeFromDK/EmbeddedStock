@@ -1,17 +1,18 @@
-@model EmbeddedStockSolution.ViewModels.CategoryViewModel
+@model EmbeddedStockSolution.ViewModels.ComponentViewModel
 
 <div class="row"> 
-<h2>Create new category<h2>
-<form asp-controller="category" asp-action="create" method="post">
-    Name:  <input asp-for="Name"/> <br />
-    Add Component types: <br>
-    <select asp-for="ComponentTypeIds">
+<h2>Create new Component<h2>
+<form asp-controller="component" asp-action="create" method="post">
+    ComponentNumber:  <input asp-for="ComponentNumber"/> <br /><br>
+    Serial Number:  <input asp-for="SerialNo"/> <br /><br>
+    Add Component type: <br>
+    <select asp-for="ComponentTypeId">
       @foreach (var componentType in @ViewBag.list)
       {    
         <option value="@componentType.ComponentTypeId">@componentType.ComponentName</option>
       }
     </select>
-    <br>
+    <br><br>
   <button onclick="goBack()"class="btn">Back</button>
     
     <button type="submit" class="btn">Create</button>
