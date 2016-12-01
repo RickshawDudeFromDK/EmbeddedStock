@@ -1,0 +1,18 @@
+<div class="row"> 
+<h2>Create new category<h2>
+<form asp-controller="category" asp-action="create" method="post">
+    Name:  <input class="form-control" type="text"/> <br />
+    Add Component types: <br>
+    <select class="form-control" id="TypeId" multiple="multiple" name="TypeId">
+      @foreach (var item in @ViewBag.list)
+      {    
+        <option value="@item">@item</option>
+      }
+    </select>
+    <br>
+    <button type="submit" class="btn">Create</button>
+</form>
+<div class="row"> 
+
+  
+    

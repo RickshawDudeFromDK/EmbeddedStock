@@ -1,7 +1,7 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\swank\\.nuget\\packages"
+      "/Users/mathias/.nuget/packages"
     ]
   }
 }

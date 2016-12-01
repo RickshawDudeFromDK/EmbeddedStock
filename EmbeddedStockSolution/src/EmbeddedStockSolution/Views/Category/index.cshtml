@@ -1,1 +1,16 @@
-fds
+<div class="row"> 
+<h2>Categories<h2>
+  <button class="btn"><a asp-area="" asp-controller="category" asp-action="new">Add</a></button>
+<div class="row"> 
+<hr>
+
+@foreach (var item in @ViewBag.list)
+{
+  <div class="row">
+    <span>@item</span>
+    <button class="btn"><a asp-area="" asp-controller="category" asp-action="show" asp-route-id="@item">Show</a></button>
+    <button class="btn"><a asp-area="" asp-controller="category" asp-action="edit" asp-route-id="@item">Edit</a></button>
+    <button class="btn"><a asp-area="" asp-controller="category" asp-action="delete" onclick = "return confirm('Are you sure you wish to delete this article?');" asp-route-id="@item">Delete</a></button>
+  </div>
+
+}
