@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace EmbeddedStock.Models
+namespace EmbeddedStockSolution.Models
 {
     public class EmbeddedStockContext : DbContext
     {
