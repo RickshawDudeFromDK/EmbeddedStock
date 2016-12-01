@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using EmbeddedStockSolution.Models;
 
-namespace EmbeddedStock.Models
+namespace EmbeddedStockSolution.Models
 {
     public class ComponentType
     {

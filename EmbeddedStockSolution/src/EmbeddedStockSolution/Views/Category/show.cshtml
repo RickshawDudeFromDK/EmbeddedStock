@@ -1,1 +1,5 @@
-fds
+<h2>@ViewBag.category.Name</h2>
+@foreach (var item in @ViewBag.list)
+      {    
+        <li value="@item">@item</li>
+      }

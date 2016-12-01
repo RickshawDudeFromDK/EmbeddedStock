@@ -1,24 +1,25 @@
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
+using EmbeddedStockSolution.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace EmbeddedStockSolution.Repositories
 {
 
     public class GeneriskRepository<TEntity> : IGeneriskRepository<TEntity> where TEntity : class
     {
-        internal DataContext context;
+        internal EmbeddedStockContext context;
         internal DbSet<TEntity> dbSet;
 
-        public GeneriskRepository(DataContext context)
+        public GeneriskRepository(EmbeddedStockContext context)
         {
             this.context = context;
             this.dbSet = context.Set<TEntity>();
         }
 
-        /*public virtual IEnumerable<TEntity> Get(
+        public virtual IEnumerable<TEntity> Get(
             Expression<Func<TEntity, bool>> filter = null,
             Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
             string includeProperties = "")
@@ -44,7 +45,7 @@ namespace EmbeddedStockSolution.Repositories
             {
                 return query.ToList();
             }
-        } */
+        } 
 
         public virtual TEntity GetByID(object id)
         {
@@ -55,10 +56,16 @@ namespace EmbeddedStockSolution.Repositories
         {
             dbSet.Add(entity);
             context.SaveChanges();
-
         }
 
         public virtual void Delete(object id)
+        {
+            TEntity deleteEntity = dbSet.Find(id);
+            Delete(deleteEntity);
+            context.SaveChanges();
+        }
+
+        public virtual void Delete(TEntity id)
         {
             TEntity deleteEntity = dbSet.Find(id);
             Delete(deleteEntity);

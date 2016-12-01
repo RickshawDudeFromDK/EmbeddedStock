@@ -7,7 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using EmbeddedStock.Models;
+using EmbeddedStockSolution.Models;
+using EmbeddedStockSolution.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace EmbeddedStockSolution
@@ -31,8 +32,9 @@ namespace EmbeddedStockSolution
         {
             // Add framework services.
             services.AddMvc();
+            services.AddScoped(typeof(IGeneriskRepository<>), typeof(GeneriskRepository<>));
 
-            var connection = @"Server=(localdb)\mssqllocaldb;Database=EmbeddedStock;Trusted_Connection=True;";
+            var connection = @"Server=(localdb)\mssqllocaldb;Database=EmbeddedStock;Trusted_Connection=False;";
             services.AddDbContext<EmbeddedStockContext>(options => options.UseSqlServer(connection));
         }
 

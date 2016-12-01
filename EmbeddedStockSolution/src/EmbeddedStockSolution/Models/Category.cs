@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using EmbeddedStockSolution.Models;
 
-namespace EmbeddedStock.Models
+namespace EmbeddedStockSolution.Models
 {
     public class Category
     {
         public int CategoryId { get; set;}
         public string Name { get; set; }
-        public List<CategoryComponentType> CategoryComponentTypes { get; protected set; }
+        public List<CategoryComponentType> CategoryComponentTypes { get; set; }
     }
 }

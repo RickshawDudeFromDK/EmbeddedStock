@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using EmbeddedStock.Models;
+using EmbeddedStockSolution.Models;
 
 namespace EmbeddedStockSolution.Migrations
 {

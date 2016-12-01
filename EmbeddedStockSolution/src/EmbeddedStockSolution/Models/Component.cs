@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace EmbeddedStock.Models
+namespace EmbeddedStockSolution.Models
 {
     public class Component
     {

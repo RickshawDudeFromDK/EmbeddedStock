@@ -1,12 +1,14 @@
+@model EmbeddedStockSolution.ViewModels.CategoryViewModel
+
 <div class="row"> 
 <h2>Create new category<h2>
 <form asp-controller="category" asp-action="create" method="post">
-    Name:  <input class="form-control" type="text"/> <br />
+    Name:  <input asp-for="Name"/> <br />
     Add Component types: <br>
-    <select class="form-control" id="TypeId" multiple="multiple" name="TypeId">
-      @foreach (var item in @ViewBag.list)
+    <select asp-for="ComponentTypeIds">
+      @foreach (var componentType in @ViewBag.list)
       {    
-        <option value="@item">@item</option>
+        <option value="@componentType.ComponentTypeId">@componentType.ComponentName</option>
       }
     </select>
     <br>

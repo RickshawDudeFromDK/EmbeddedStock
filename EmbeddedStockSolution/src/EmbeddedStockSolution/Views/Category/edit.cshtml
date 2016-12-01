@@ -1,14 +1,15 @@
 <div class="row"> 
 <h2>Create new category<h2>
-<form asp-controller="Demo" asp-action="Register" method="post">
-    Name:  <input asp-for="Email" /> <br />
+<form asp-controller="category" asp-action="update" method="post">
+    Name:  <input class="form-control" type="text"/> <br />
     Add Component types: <br>
-    <!--<select id="CategoryId" multiple="multiple" name="CategoryId">
+    <select class="form-control" id="TypeId" multiple="multiple" name="TypeId">
       @foreach (var item in @ViewBag.list)
       {    
         <option value="@item">@item</option>
       }
-    </select>-->
-    <button type="submit">Create</button>
+    </select>
+    <br>
+    <button type="submit" class="btn">Update</button>
 </form>
 <div class="row"> 

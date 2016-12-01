@@ -1,4 +1,4 @@
-﻿using EmbeddedStock.Models;
+﻿using EmbeddedStockSolution.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

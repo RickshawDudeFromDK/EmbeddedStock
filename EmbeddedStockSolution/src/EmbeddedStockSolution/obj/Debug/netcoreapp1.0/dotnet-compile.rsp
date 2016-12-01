@@ -213,3 +213,6 @@
 /Users/mathias/projects/EmbeddedStock2/EmbeddedStockSolution/src/EmbeddedStockSolution/Models/Component.cs
 /Users/mathias/projects/EmbeddedStock2/EmbeddedStockSolution/src/EmbeddedStockSolution/Models/ComponentType.cs
 /Users/mathias/projects/EmbeddedStock2/EmbeddedStockSolution/src/EmbeddedStockSolution/Models/EmbeddedStockContext.cs
+/Users/mathias/projects/EmbeddedStock2/EmbeddedStockSolution/src/EmbeddedStockSolution/Repositories/GeneriskRepository.cs
+/Users/mathias/projects/EmbeddedStock2/EmbeddedStockSolution/src/EmbeddedStockSolution/Repositories/IGeneriskRepository.cs
+/Users/mathias/projects/EmbeddedStock2/EmbeddedStockSolution/src/EmbeddedStockSolution/ViewModels/CategoryViewModel.cs
