@@ -4,7 +4,7 @@
 <h2>Create new category<h2>
 <form asp-controller="category" asp-action="create" method="post">
     Name:  <input asp-for="Name"/> <br />
-    Add Component types: <br>
+    Add Component types to category: <br>
     <select asp-for="ComponentTypeIds">
       @foreach (var componentType in @ViewBag.list)
       {    

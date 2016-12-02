@@ -6,12 +6,10 @@
 
 @foreach (var item in @ViewBag.list)
 {
-  <div class="row">
     <span>@item.Name</span>
     <button class="btn" onclick="location.href='@Url.Action("show", "category")/@item.CategoryId'">Show</button>
     <button class="btn" onclick="location.href='@Url.Action("edit", "category")/@item.CategoryId'">Edit</button>
     <button class="btn" onclick = "location.href='@Url.Action("delete", "category")/@item.CategoryId';return confirm('Are you sure you wish to delete this article?');" >Delete</button>
-  </div>
 
 }
-<div class="row"> 
+</div> 

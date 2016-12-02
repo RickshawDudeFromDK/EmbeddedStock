@@ -10,5 +10,7 @@ namespace EmbeddedStockSolution.ViewModels
     public int ComponentNumber { get; set; }
     public string SerialNo { get; set; }
 
+    public string SearchTerm { get; set;}
+
   }
 }

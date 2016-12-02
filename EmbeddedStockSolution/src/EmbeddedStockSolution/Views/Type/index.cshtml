@@ -6,10 +6,8 @@
 
 @foreach (var item in @ViewBag.list)
 {
-  <div class="row">
     <span>@item.ComponentName</span>
     <button class="btn" onclick="location.href='@Url.Action("show", "type")/@item.ComponentTypeId'">Show</button>
-  </div>
 
 }
-<div class="row"> 
+</div> 

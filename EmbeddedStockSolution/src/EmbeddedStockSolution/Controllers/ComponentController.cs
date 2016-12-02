@@ -116,5 +116,21 @@ namespace EmbeddedStockSolution.Controllers
             return RedirectToAction("", "component", new { area = "" });
         }
 
+        public IActionResult Search(ComponentViewModel model){
+
+            var cat = new ComponentViewModel();
+            cat.ComponentNumber = 1231345454;
+            //needs list of all component
+            cat.SerialNo = "12a3ds12a";
+            cat.ComponentId = 2;
+            var com = new ComponentType();
+            com.ComponentName = "hej";
+            com.ComponentTypeId = 1;
+            cat.ComponentType = com;
+            //show filtered list of Components in shape of a viewmodel
+            ViewBag.list = new List<ComponentViewModel>{cat};
+            return View("Index", model);
+        }
+
     }
 }
