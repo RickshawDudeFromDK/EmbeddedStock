@@ -1,6 +1,10 @@
 <div class="row"> 
 <h2>Components<h2>
   <button class="btn" onclick="location.href='@Url.Action("new", "component")'">Add</button>
+  <form asp-controller="component" asp-action="search" method="post">
+    Søg:  <input type="text"/> <br /><br>
+    <button type="submit" class="btn">Søg</button>
+  </form>
 
 <hr>
 

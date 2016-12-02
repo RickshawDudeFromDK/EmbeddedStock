@@ -63,45 +63,57 @@ namespace EmbeddedStockSolution.Controllers
         [HttpGet("[controller]/[action]/{id}")]
         public IActionResult Show(string id)
         {
-            //needs to find a category with its componenttype names in the list
-            Category cat = new Category();
-            cat.Name = "hejhejhej";
-            ComponentType com = new ComponentType();
-            com.ComponentName = "efdsdf";
+            //needs to find a component with its componenttype names in the list
+            var cat = new ComponentViewModel();
+            cat.ComponentNumber = 1231345454;
+            //needs list of all component
+            cat.SerialNo = "12a3ds12a";
+            cat.ComponentId = 2;
+            var com = new ComponentType();
+            com.ComponentName = "hej";
             com.ComponentTypeId = 1;
+            var com2 = new ComponentType();
+            com2.ComponentName = "hedsadasj";
+            com2.ComponentTypeId = 4;
             ViewBag.componentList = new List<ComponentType>{com};
-            ViewBag.category = cat;
+            ViewBag.component = cat;
+            ViewBag.componentType = com;
             return View();
         }
 
-        [HttpGet("{category}/[action]/{id}")]
+        [HttpGet("[controller]/[action]/{id}")]
         public IActionResult Edit(string id)
         {
-            //needs to find a category with its componenttypes
-            Category cat = new Category();
-            cat.Name = "hejhejhej";
-            cat.CategoryId = 1;
-            ComponentType com = new ComponentType();
-            com.ComponentName = "efdsdf";
+            //needs to find a component with its componenttype
+            var cat = new ComponentViewModel();
+            cat.ComponentNumber = 1231345454;
+            //needs list of all component
+            cat.SerialNo = "12a3ds12a";
+            cat.ComponentId = 2;
+            cat.ComponentTypeId = 2;
+            var com = new ComponentType();
+            com.ComponentName = "hej";
             com.ComponentTypeId = 1;
-            ViewBag.componentList = new List<ComponentType>{com};
-            ViewBag.existingComponentList = new List<string>{"fdsf", "fds"};
-            ViewBag.category = cat;
-            return View();
+            var com2 = new ComponentType();
+            com2.ComponentName = "hedsadasj";
+            com2.ComponentTypeId = 2;
+            cat.ComponentType = com;
+            ViewBag.list = new List<ComponentType>{com, com2};
+            return View(cat);
         }
 
         [HttpPost]
         public IActionResult Update(CategoryViewModel model)
         {
             //find category and update with new name and component types
-            return RedirectToAction("", "category", new { area = "" });
+            return RedirectToAction("", "component", new { area = "" });
         }
 
-        [HttpGet("{category}/[action]/{id}")]
+        [HttpGet("[controller]/[action]/{id}")]
         public IActionResult Delete()
         {
             //delete category and its bindings to componttypes
-            return RedirectToAction("", "category", new { area = "" });
+            return RedirectToAction("", "component", new { area = "" });
         }
 
     }
