@@ -16,6 +16,8 @@ namespace EmbeddedStockSolution.Repositories
 
         void Insert(TEntity entity);
 
+        IQueryable<TEntity> GetAll();
+
         void Delete(object id);
 
         void Delete(TEntity deleteEntity);

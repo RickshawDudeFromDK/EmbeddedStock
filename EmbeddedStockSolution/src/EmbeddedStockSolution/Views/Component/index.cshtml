@@ -15,10 +15,10 @@
 
 @foreach (var item in @ViewBag.list)
 {
-    <span>Serial No: @item.SerialNo. Type: @item.ComponentType.ComponentName</span>
+    <span>Serial No: @item.SerialNo.</span>
     <button class="btn" onclick="location.href='@Url.Action("show", "component")/@item.ComponentId'">Show</button>
     <button class="btn" onclick="location.href='@Url.Action("edit", "component")/@item.ComponentId'">Edit</button>
     <button class="btn" onclick = "location.href='@Url.Action("delete", "component")/@item.ComponentId';return confirm('Are you sure you wish to delete this article?');" >Delete</button>
-
+    <br>
 }
 </div> 

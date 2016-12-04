@@ -17,7 +17,7 @@ namespace EmbeddedStockSolution.Models
         public string Manufacturer { get; set; }
 
         public List<Component> Components { get; protected set; }
-        public List<CategoryComponentType> CategoryComponentTypes { get; protected set; }
+        public List<CategoryComponentType> CategoryComponentTypes { get; set; }
 
     }
 }

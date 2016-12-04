@@ -30,13 +30,17 @@ namespace EmbeddedStockSolution.Controllers
             var com = new ComponentType();
             com.ComponentName = "hej";
             com.ComponentTypeId = 1;
-            cat.ComponentType = com;
-            ViewBag.list = new List<ComponentViewModel>{cat};
+
+            using (var db = new EmbeddedStockContext())
+            {
+                ViewBag.list = db.Components.ToList<Component>();
+            }
+             
             return View();
         }
 
         public IActionResult New()
-        { 
+        {
             var cat = new ComponentViewModel();
             cat.ComponentNumber = 1231345454;
             //needs list of all component
@@ -49,14 +53,26 @@ namespace EmbeddedStockSolution.Controllers
             com2.ComponentName = "hedsadasj";
             com2.ComponentTypeId = 4;
             //requires list of all component types
-            ViewBag.list = new List<ComponentType>{com, com2};
+            ViewBag.list = _typeRepo.GetAll().ToList<ComponentType>();
             return View();
         }
         
         [HttpPost]
         public IActionResult Create(ComponentViewModel model)
-        { 
+        {
             //needs to create a category and create the binding to the chosen componenttypes
+
+            using (var db = new EmbeddedStockContext())
+            {
+                var com = new Component();
+                com.ComponentNumber = model.ComponentNumber;
+                com.SerialNo = model.SerialNo;
+                com.ComponentTypeId = model.ComponentTypeId;
+                db.Components.Add(com);
+                db.SaveChanges();
+
+            }
+
             return RedirectToAction("", "component", new { area = "" });
         }
 
@@ -97,7 +113,7 @@ namespace EmbeddedStockSolution.Controllers
             var com2 = new ComponentType();
             com2.ComponentName = "hedsadasj";
             com2.ComponentTypeId = 2;
-            cat.ComponentType = com;
+            //cat.ComponentType = com;
             ViewBag.list = new List<ComponentType>{com, com2};
             return View(cat);
         }
@@ -110,9 +126,17 @@ namespace EmbeddedStockSolution.Controllers
         }
 
         [HttpGet("[controller]/[action]/{id}")]
-        public IActionResult Delete()
+        public IActionResult Delete(int id)
         {
             //delete category and its bindings to componttypes
+            using (var db = new EmbeddedStockContext())
+            {
+                var del = new Component { ComponentId = id };
+                db.Components.Remove(del);
+                db.SaveChanges();
+            }
+
+
             return RedirectToAction("", "component", new { area = "" });
         }
 
@@ -126,7 +150,7 @@ namespace EmbeddedStockSolution.Controllers
             var com = new ComponentType();
             com.ComponentName = "hej";
             com.ComponentTypeId = 1;
-            cat.ComponentType = com;
+            //cat.ComponentType = com;
             //show filtered list of Components in shape of a viewmodel
             ViewBag.list = new List<ComponentViewModel>{cat};
             return View("Index", model);

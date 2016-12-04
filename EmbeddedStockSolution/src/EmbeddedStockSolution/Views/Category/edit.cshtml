@@ -7,7 +7,7 @@
     Existing Component Types:
     @foreach (var componentType in @ViewBag.existingComponentList)
       {    
-        <li>@componentType</li>
+        <li>@componentType.ComponentName</li>
       }
     Choose Component types: <br>
     <select asp-for="ComponentTypeIds">

@@ -52,6 +52,12 @@ namespace EmbeddedStockSolution.Repositories
             return dbSet.Find(id);
         }
 
+        public IQueryable<TEntity> GetAll()
+        {
+            return context.Set<TEntity>();
+        }
+
+
         public virtual void Insert(TEntity entity)
         {
             dbSet.Add(entity);
@@ -64,6 +70,7 @@ namespace EmbeddedStockSolution.Repositories
             Delete(deleteEntity);
             context.SaveChanges();
         }
+
 
         public virtual void Delete(TEntity id)
         {

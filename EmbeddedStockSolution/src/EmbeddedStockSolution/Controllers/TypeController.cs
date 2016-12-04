@@ -22,11 +22,9 @@ namespace EmbeddedStockSolution.Controllers
 
         public IActionResult Index()
         {
-            var type = new ComponentType();
-            type.ComponentName = "example";
-            type.ComponentTypeId = 1;
+            
             //needs list of all types
-            ViewBag.list = new List<ComponentType>{type};
+            ViewBag.list = _typeRepo.GetAll().ToList<ComponentType>();
             return View();
         }
 
@@ -36,16 +34,24 @@ namespace EmbeddedStockSolution.Controllers
             cat.Name = "hej";
             cat.CategoryId = 1;
             //requires list of all categories
-            ViewBag.categorylist = new List<Category>{cat};
+            ViewBag.categorylist = _categoryRepo.GetAll().ToList<Category>();
             return View();
         }
         
         [HttpPost]
         public IActionResult Create(TypeViewModel model)
-        { 
+        {
+            var com = new ComponentType();
+            com.ComponentName = model.Name;
+            com.ComponentInfo = model.Info;
+            com.ImageUrl = model.ImageUrl;
+            com.Location = model.Location;
+            com.Manufacturer = model.Manufacturer;
+
+            _typeRepo.Insert(com);
+
             //create new type and associate with chosen categories
-            var cat = new Category();
-            cat.Name = model.Name;
+     
             return RedirectToAction("", "type", new { area = "" });
         }
 

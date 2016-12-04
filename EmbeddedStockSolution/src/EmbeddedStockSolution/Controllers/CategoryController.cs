@@ -22,11 +22,12 @@ namespace EmbeddedStockSolution.Controllers
 
         public IActionResult Index()
         {
-            var cat = new Category();
-            cat.Name = "example";
-            cat.CategoryId = 1;
+            ////var cat = new Category();
+            ////cat.Name = "example";
+            ////cat.CategoryId = 1;
             //needs list of all categories
-            ViewBag.list = new List<Category>{cat};
+
+            ViewBag.list = _categoryRepo.GetAll().ToList<Category>();
             return View();
         }
 
@@ -36,7 +37,7 @@ namespace EmbeddedStockSolution.Controllers
             com.ComponentName = "hej";
             com.ComponentTypeId = 1;
             //requires list of all component types
-            ViewBag.list = new List<ComponentType>{com};
+            ViewBag.list = _typeRepo.GetAll().ToList<ComponentType>();
             return View();
         }
         
@@ -44,13 +45,35 @@ namespace EmbeddedStockSolution.Controllers
         public IActionResult Create(CategoryViewModel model)
         { 
             //needs to create a category and create the binding to the chosen componenttypes
-            var cat = new Category();
-            cat.Name = model.Name;
+           
+
+            using (var db = new EmbeddedStockContext())
+            {
+
+                var cat = new Category();
+                cat.Name = model.Name;
+                db.Categories.Add(cat);
+
+
+                if(model.ComponentTypeIds!=null)
+                foreach (int id in model.ComponentTypeIds)
+                {
+                    var type = db.ComponentTypes.Find(id);
+                    var cattyp = new CategoryComponentType() { Category = cat, ComponentType = type };
+                    db.CategoryComponentTypes.Add(cattyp);
+                }
+                
+
+                db.SaveChanges();
+
+            }
+
+
             return RedirectToAction("", "category", new { area = "" });
         }
 
         [HttpGet("{category}/[action]/{id}")]
-        public IActionResult Show(string id)
+        public IActionResult Show(int id)
         {
             //needs to find a category with its componenttype names in the list
             Category cat = new Category();
@@ -58,23 +81,27 @@ namespace EmbeddedStockSolution.Controllers
             ComponentType com = new ComponentType();
             com.ComponentName = "efdsdf";
             com.ComponentTypeId = 1;
+
+
+
+
             ViewBag.componentList = new List<ComponentType>{com};
             ViewBag.category = cat;
             return View();
         }
 
         [HttpGet("{category}/[action]/{id}")]
-        public IActionResult Edit(string id)
+        public IActionResult Edit(int id)
         {
             //needs to find a category with its componenttypes
             Category cat = new Category();
             cat.Name = "hejhejhej";
-            cat.CategoryId = 1;
+            cat.CategoryId = id;
             ComponentType com = new ComponentType();
             com.ComponentName = "efdsdf";
             com.ComponentTypeId = 1;
-            ViewBag.componentList = new List<ComponentType>{com};
-            ViewBag.existingComponentList = new List<string>{"fdsf", "fds"};
+            ViewBag.componentList = _typeRepo.GetAll().ToList<ComponentType>();
+            ViewBag.existingComponentList = _typeRepo.GetAll().ToList<ComponentType>();
             ViewBag.category = cat;
             return View();
         }
@@ -82,14 +109,44 @@ namespace EmbeddedStockSolution.Controllers
         [HttpPost]
         public IActionResult Update(CategoryViewModel model)
         {
+            using (var db = new EmbeddedStockContext())
+            {
+                var edit = new Category { CategoryId = model.Id, Name = model.Name };
+                db.Categories.Attach(edit);
+                var entry = db.Entry(edit);
+                entry.Property(e => e.Name).IsModified = true;
+
+                db.CategoryComponentTypes.RemoveRange(db.CategoryComponentTypes.Where(c => c.CategoryId == model.Id));
+
+                foreach (int id in model.ComponentTypeIds)
+                {
+
+                    var type = db.ComponentTypes.Find(id);
+                    var cat = db.Categories.Find(model.Id);
+
+                    var cattyp = new CategoryComponentType() { Category = cat, ComponentType = type };
+                    db.CategoryComponentTypes.Add(cattyp);
+                }
+
+                db.SaveChanges();
+               
+            }
+
             //find category and update with new name and component types
             return RedirectToAction("", "category", new { area = "" });
         }
 
         [HttpGet("{category}/[action]/{id}")]
-        public IActionResult Delete()
+        public IActionResult Delete(int id)
         {
-            //delete category and its bindings to componttypes
+
+            using (var db = new EmbeddedStockContext())
+            {
+                var del = new Category { CategoryId = id};
+                db.Categories.Remove(del);
+                db.SaveChanges();
+            }
+
             return RedirectToAction("", "category", new { area = "" });
         }
 
