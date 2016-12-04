@@ -74,9 +74,15 @@ namespace EmbeddedStockSolution.Repositories
 
         public virtual void Delete(TEntity id)
         {
-            TEntity deleteEntity = dbSet.Find(id);
-            Delete(deleteEntity);
+            if (context.Entry(id).State == EntityState.Detached)
+            {
+                dbSet.Attach(id);
+            }
+            dbSet.Remove(id);
             context.SaveChanges();
+            //TEntity deleteEntity = dbSet.Find(id);
+            //Delete(deleteEntity);
+            //context.SaveChanges();
         }
 
 
