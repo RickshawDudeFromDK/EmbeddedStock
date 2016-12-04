@@ -12,5 +12,6 @@ namespace EmbeddedStockSolution.Models
         public int ComponentTypeId { get; set; }
         public int ComponentNumber { get; set; }
         public string SerialNo { get; set; }
+        public string SearchTerm { get; set; }
     }
 }

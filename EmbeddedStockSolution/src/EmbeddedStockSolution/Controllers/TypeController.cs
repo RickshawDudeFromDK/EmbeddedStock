@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using EmbeddedStockSolution.Models;
 using EmbeddedStockSolution.Repositories;
 using EmbeddedStockSolution.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace EmbeddedStockSolution.Controllers
 {
@@ -56,21 +57,55 @@ namespace EmbeddedStockSolution.Controllers
         }
 
         [HttpGet("[controller]/[action]/{id}")]
-        public IActionResult Show(string id)
+        public IActionResult Show(int id)
         {
             
             Category cat = new Category();
             cat.Name = "hejhejhej";
-            ComponentType comtype = new ComponentType();
-            comtype.ComponentName = "efdsdf";
-            comtype.ComponentTypeId = 1;
-            var com = new Component();
-            com.ComponentId = 1;
-            com.ComponentNumber = 3;
+            //ComponentType comtype = new ComponentType();
+            //comtype.ComponentName = "efdsdf";
+            //comtype.ComponentTypeId = 1;
+            //var com = new Component();
+            //com.ComponentId = 1;
+            //com.ComponentNumber = 3;
             //needs to find a Componenttype with its categories names and components in 2 lists
-            ViewBag.componentList = new List<Component>{com};
-            ViewBag.categoryNames = new List<string>{"fds", "fds"};
-            ViewBag.component_type = comtype;
+
+            List<Component> tempList = new List<Component>();
+            ComponentType tempComp = new ComponentType();
+            List<Category> tempCatlist = new List<Category>();
+
+            using (var db = new EmbeddedStockContext())
+            {
+
+
+                var query = from c in db.Components
+                           where c.ComponentTypeId == id
+                           select c;
+
+                tempList = query.ToList();
+
+                tempComp = db.ComponentTypes.Find(id);
+
+
+                tempCatlist = db.CategoryComponentTypes.Include(ct => ct.Category)
+                             .Where(c => c.ComponentTypeId == id)
+                             .Select(c => c.Category)
+                             .ToList();
+
+            }
+
+            ViewBag.componentList = tempList;
+
+
+
+            var stringlist = new List<string> ();
+            foreach ( Category cate in tempCatlist)
+            {
+                stringlist.Add(cate.Name);
+            }
+
+            ViewBag.categoryNames = stringlist;
+            ViewBag.component_type = tempComp;
             return View();
         }
     }

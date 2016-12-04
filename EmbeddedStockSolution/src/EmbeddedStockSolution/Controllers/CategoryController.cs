@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using EmbeddedStockSolution.Models;
 using EmbeddedStockSolution.Repositories;
 using EmbeddedStockSolution.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace EmbeddedStockSolution.Controllers
 {
@@ -76,16 +77,29 @@ namespace EmbeddedStockSolution.Controllers
         public IActionResult Show(int id)
         {
             //needs to find a category with its componenttype names in the list
+            
+            //cat.Name = "hejhejhej";
+            //ComponentType com = new ComponentType();
+            //com.ComponentName = "efdsdf";
+            //com.ComponentTypeId = 1;
+
+            List<ComponentType> tempList = new List<ComponentType>();
             Category cat = new Category();
-            cat.Name = "hejhejhej";
-            ComponentType com = new ComponentType();
-            com.ComponentName = "efdsdf";
-            com.ComponentTypeId = 1;
+            using (var db = new EmbeddedStockContext())
+            {
+           
+                tempList = db.CategoryComponentTypes.Include(ct => ct.ComponentType)
+                             .Where(c => c.CategoryId == id)
+                             .Select(c => c.ComponentType)
+                             .ToList();
+
+                cat = db.Categories.Find(id);
+
+            }
 
 
 
-
-            ViewBag.componentList = new List<ComponentType>{com};
+            ViewBag.componentList = tempList;
             ViewBag.category = cat;
             return View();
         }

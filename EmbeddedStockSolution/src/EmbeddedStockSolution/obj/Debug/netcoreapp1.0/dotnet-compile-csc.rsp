@@ -211,6 +211,8 @@
 "C:\Users\swank\Desktop\SqL\EmbeddedStock\EmbeddedStockSolution\src\EmbeddedStockSolution\Migrations\20161203235041_updatevvC.Designer.cs"
 "C:\Users\swank\Desktop\SqL\EmbeddedStock\EmbeddedStockSolution\src\EmbeddedStockSolution\Migrations\20161204023452_updateNewDBset.cs"
 "C:\Users\swank\Desktop\SqL\EmbeddedStock\EmbeddedStockSolution\src\EmbeddedStockSolution\Migrations\20161204023452_updateNewDBset.Designer.cs"
+"C:\Users\swank\Desktop\SqL\EmbeddedStock\EmbeddedStockSolution\src\EmbeddedStockSolution\Migrations\20161204183556_addedSearchTermToModel.cs"
+"C:\Users\swank\Desktop\SqL\EmbeddedStock\EmbeddedStockSolution\src\EmbeddedStockSolution\Migrations\20161204183556_addedSearchTermToModel.Designer.cs"
 "C:\Users\swank\Desktop\SqL\EmbeddedStock\EmbeddedStockSolution\src\EmbeddedStockSolution\Migrations\EmbeddedStockContextModelSnapshot.cs"
 "C:\Users\swank\Desktop\SqL\EmbeddedStock\EmbeddedStockSolution\src\EmbeddedStockSolution\Models\Category.cs"
 "C:\Users\swank\Desktop\SqL\EmbeddedStock\EmbeddedStockSolution\src\EmbeddedStockSolution\Models\CategoryComponentType.cs"

@@ -50,6 +50,8 @@ namespace EmbeddedStockSolution.Migrations
 
                     b.Property<int>("ComponentTypeId");
 
+                    b.Property<string>("SearchTerm");
+
                     b.Property<string>("SerialNo");
 
                     b.HasKey("ComponentId");

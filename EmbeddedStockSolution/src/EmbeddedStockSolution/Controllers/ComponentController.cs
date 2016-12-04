@@ -77,45 +77,57 @@ namespace EmbeddedStockSolution.Controllers
         }
 
         [HttpGet("[controller]/[action]/{id}")]
-        public IActionResult Show(string id)
+        public IActionResult Show(int id)
         {
             //needs to find a component with its componenttype names in the list
-            var cat = new ComponentViewModel();
-            cat.ComponentNumber = 1231345454;
-            //needs list of all component
-            cat.SerialNo = "12a3ds12a";
-            cat.ComponentId = 2;
+            var comp = new Component();
+
+
             var com = new ComponentType();
-            com.ComponentName = "hej";
-            com.ComponentTypeId = 1;
-            var com2 = new ComponentType();
-            com2.ComponentName = "hedsadasj";
-            com2.ComponentTypeId = 4;
-            ViewBag.componentList = new List<ComponentType>{com};
-            ViewBag.component = cat;
+
+
+            using (var db = new EmbeddedStockContext())
+            {
+
+               comp = db.Components.Find(id);
+               com = db.ComponentTypes.Find(comp.ComponentTypeId);
+
+            }
+
+            ViewBag.component = comp;
+
             ViewBag.componentType = com;
             return View();
         }
 
         [HttpGet("[controller]/[action]/{id}")]
-        public IActionResult Edit(string id)
+        public IActionResult Edit(int id)
         {
             //needs to find a component with its componenttype
-            var cat = new ComponentViewModel();
-            cat.ComponentNumber = 1231345454;
-            //needs list of all component
-            cat.SerialNo = "12a3ds12a";
-            cat.ComponentId = 2;
-            cat.ComponentTypeId = 2;
-            var com = new ComponentType();
-            com.ComponentName = "hej";
-            com.ComponentTypeId = 1;
-            var com2 = new ComponentType();
-            com2.ComponentName = "hedsadasj";
-            com2.ComponentTypeId = 2;
+            var compVM = new ComponentViewModel();
+            var comp = new Component();
+
+            using (var db = new EmbeddedStockContext())
+            {
+                comp = db.Components.Find(id);
+            }
+
+            compVM.ComponentId = comp.ComponentId;
+            compVM.ComponentNumber = comp.ComponentNumber;
+            compVM.ComponentTypeId = comp.ComponentTypeId;
+            compVM.SearchTerm = comp.SearchTerm;
+            compVM.SerialNo = comp.SerialNo;
+            
+
+            //var com = new ComponentType();
+            //com.ComponentName = "hej";
+            //com.ComponentTypeId = 1;
+            //var com2 = new ComponentType();
+            //com2.ComponentName = "hedsadasj";
+            //com2.ComponentTypeId = 2;
             //cat.ComponentType = com;
-            ViewBag.list = new List<ComponentType>{com, com2};
-            return View(cat);
+            ViewBag.list = _typeRepo.GetAll().ToList<ComponentType>();
+            return View(compVM);
         }
 
         [HttpPost]
@@ -152,7 +164,24 @@ namespace EmbeddedStockSolution.Controllers
             com.ComponentTypeId = 1;
             //cat.ComponentType = com;
             //show filtered list of Components in shape of a viewmodel
-            ViewBag.list = new List<ComponentViewModel>{cat};
+
+
+            using (var db = new EmbeddedStockContext())
+            {
+                // ViewBag.list = db.Components.ToList<Component>();
+
+                if (model.SearchTerm!=null) { 
+                    var tempS = db.Components.Where(c => c.ComponentNumber.ToString().Contains(model.SearchTerm));
+
+                ViewBag.list = tempS.ToList<Component>();
+            }
+
+                else
+                    ViewBag.list = db.Components.ToList<Component>();
+            }
+
+            
+
             return View("Index", model);
         }
 

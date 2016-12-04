@@ -5,7 +5,7 @@
   <button class="btn" onclick="location.href='@Url.Action("new", "component")'">Add</button>
   <hr>
   <form asp-controller="component" asp-action="search" method="post">
-    Søg:  <input asp-for="SearchTerm"/>
+    Søg (component number):  <input asp-for="SearchTerm"/>
     <button type="submit" class="btn">Søg</button>
     <button class="btn" type="button" onclick="location.href='@Url.Action("", "component")'">Show full list</button>   
   </form>
