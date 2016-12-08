@@ -8,8 +8,8 @@ using EmbeddedStockSolution.Models;
 namespace EmbeddedStockSolution.Migrations
 {
     [DbContext(typeof(EmbeddedStockContext))]
-    [Migration("20161127220053_CreateDatabase")]
-    partial class CreateDatabase
+    [Migration("20161207052704_firstt")]
+    partial class firstt
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -17,7 +17,7 @@ namespace EmbeddedStockSolution.Migrations
                 .HasAnnotation("ProductVersion", "1.1.0-rtm-22752")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("EmbeddedStock.Models.Category", b =>
+            modelBuilder.Entity("EmbeddedStockSolution.Models.Category", b =>
                 {
                     b.Property<int>("CategoryId")
                         .ValueGeneratedOnAdd();
@@ -29,7 +29,20 @@ namespace EmbeddedStockSolution.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("EmbeddedStock.Models.Component", b =>
+            modelBuilder.Entity("EmbeddedStockSolution.Models.CategoryComponentType", b =>
+                {
+                    b.Property<int>("CategoryId");
+
+                    b.Property<int>("ComponentTypeId");
+
+                    b.HasKey("CategoryId", "ComponentTypeId");
+
+                    b.HasIndex("ComponentTypeId");
+
+                    b.ToTable("CategoryComponentTypes");
+                });
+
+            modelBuilder.Entity("EmbeddedStockSolution.Models.Component", b =>
                 {
                     b.Property<int>("ComponentId")
                         .ValueGeneratedOnAdd();
@@ -37,6 +50,8 @@ namespace EmbeddedStockSolution.Migrations
                     b.Property<int>("ComponentNumber");
 
                     b.Property<int>("ComponentTypeId");
+
+                    b.Property<string>("SearchTerm");
 
                     b.Property<string>("SerialNo");
 
@@ -47,7 +62,7 @@ namespace EmbeddedStockSolution.Migrations
                     b.ToTable("Components");
                 });
 
-            modelBuilder.Entity("EmbeddedStock.Models.ComponentType", b =>
+            modelBuilder.Entity("EmbeddedStockSolution.Models.ComponentType", b =>
                 {
                     b.Property<int>("ComponentTypeId")
                         .ValueGeneratedOnAdd();
@@ -69,34 +84,21 @@ namespace EmbeddedStockSolution.Migrations
 
             modelBuilder.Entity("EmbeddedStockSolution.Models.CategoryComponentType", b =>
                 {
-                    b.Property<int>("CategoryId");
-
-                    b.Property<int>("ComponentTypeId");
-
-                    b.HasKey("CategoryId", "ComponentTypeId");
-
-                    b.HasIndex("ComponentTypeId");
-
-                    b.ToTable("CategoryComponentType");
-                });
-
-            modelBuilder.Entity("EmbeddedStock.Models.Component", b =>
-                {
-                    b.HasOne("EmbeddedStock.Models.ComponentType")
-                        .WithMany("Components")
-                        .HasForeignKey("ComponentTypeId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("EmbeddedStockSolution.Models.CategoryComponentType", b =>
-                {
-                    b.HasOne("EmbeddedStock.Models.Category", "Category")
+                    b.HasOne("EmbeddedStockSolution.Models.Category", "Category")
                         .WithMany("CategoryComponentTypes")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("EmbeddedStock.Models.ComponentType", "ComponentType")
+                    b.HasOne("EmbeddedStockSolution.Models.ComponentType", "ComponentType")
                         .WithMany("CategoryComponentTypes")
+                        .HasForeignKey("ComponentTypeId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("EmbeddedStockSolution.Models.Component", b =>
+                {
+                    b.HasOne("EmbeddedStockSolution.Models.ComponentType")
+                        .WithMany("Components")
                         .HasForeignKey("ComponentTypeId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace EmbeddedStockSolution.Migrations
+namespace EmbeddedStock2.Data.Migrations
 {
-    public partial class CreateDatabase : Migration
+    public partial class newDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -40,6 +40,30 @@ namespace EmbeddedStockSolution.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "CategoryComponentTypes",
+                columns: table => new
+                {
+                    CategoryId = table.Column<int>(nullable: false),
+                    ComponentTypeId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CategoryComponentTypes", x => new { x.CategoryId, x.ComponentTypeId });
+                    table.ForeignKey(
+                        name: "FK_CategoryComponentTypes_Categories_CategoryId",
+                        column: x => x.CategoryId,
+                        principalTable: "Categories",
+                        principalColumn: "CategoryId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_CategoryComponentTypes_ComponentTypes_ComponentTypeId",
+                        column: x => x.ComponentTypeId,
+                        principalTable: "ComponentTypes",
+                        principalColumn: "ComponentTypeId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Components",
                 columns: table => new
                 {
@@ -47,6 +71,7 @@ namespace EmbeddedStockSolution.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     ComponentNumber = table.Column<int>(nullable: false),
                     ComponentTypeId = table.Column<int>(nullable: false),
+                    SearchTerm = table.Column<string>(nullable: true),
                     SerialNo = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -60,48 +85,29 @@ namespace EmbeddedStockSolution.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "CategoryComponentType",
-                columns: table => new
-                {
-                    CategoryId = table.Column<int>(nullable: false),
-                    ComponentTypeId = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_CategoryComponentType", x => new { x.CategoryId, x.ComponentTypeId });
-                    table.ForeignKey(
-                        name: "FK_CategoryComponentType_Categories_CategoryId",
-                        column: x => x.CategoryId,
-                        principalTable: "Categories",
-                        principalColumn: "CategoryId",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_CategoryComponentType_ComponentTypes_ComponentTypeId",
-                        column: x => x.ComponentTypeId,
-                        principalTable: "ComponentTypes",
-                        principalColumn: "ComponentTypeId",
-                        onDelete: ReferentialAction.Cascade);
-                });
+            migrationBuilder.CreateIndex(
+                name: "IX_CategoryComponentTypes_CategoryId",
+                table: "CategoryComponentTypes",
+                column: "CategoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CategoryComponentTypes_ComponentTypeId",
+                table: "CategoryComponentTypes",
+                column: "ComponentTypeId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Components_ComponentTypeId",
                 table: "Components",
-                column: "ComponentTypeId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_CategoryComponentType_ComponentTypeId",
-                table: "CategoryComponentType",
                 column: "ComponentTypeId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Components");
+                name: "CategoryComponentTypes");
 
             migrationBuilder.DropTable(
-                name: "CategoryComponentType");
+                name: "Components");
 
             migrationBuilder.DropTable(
                 name: "Categories");
