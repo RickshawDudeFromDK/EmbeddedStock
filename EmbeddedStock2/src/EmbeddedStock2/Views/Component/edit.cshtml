@@ -12,6 +12,7 @@
         <option value="@componentType.ComponentTypeId">@componentType.ComponentName</option>
       }
     </select>
+    <input asp-for="ComponentId" hidden="true" value=@this.Model.ComponentId></input>
     <br><br>
   <button onclick="goBack()"class="btn">Back</button>
     

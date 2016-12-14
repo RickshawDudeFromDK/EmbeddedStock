@@ -8,6 +8,7 @@ using EmbeddedStock2.Repositories;
 using EmbeddedStock2.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using EmbeddedStock2.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace EmbeddedStock2.Controllers
 {
@@ -30,6 +31,7 @@ namespace EmbeddedStock2.Controllers
             return View();
         }
 
+        [Authorize]
         public IActionResult New()
         { 
             var cat = new Category();
@@ -39,7 +41,8 @@ namespace EmbeddedStock2.Controllers
             ViewBag.categorylist = _categoryRepo.GetAll().ToList<Category>();
             return View();
         }
-        
+
+        [Authorize]
         [HttpPost]
         public IActionResult Create(TypeViewModel model)
         {
@@ -56,6 +59,7 @@ namespace EmbeddedStock2.Controllers
      
             return RedirectToAction("", "type", new { area = "" });
         }
+
 
         [HttpGet("[controller]/[action]/{id}")]
         public IActionResult Show(int id)

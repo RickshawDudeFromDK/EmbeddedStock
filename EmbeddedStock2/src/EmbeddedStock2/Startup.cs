@@ -13,6 +13,7 @@ using EmbeddedStock2.Data;
 using EmbeddedStock2.Models;
 using EmbeddedStock2.Services;
 using EmbeddedStock2.Repositories;
+using EmbeddedStock2.Migrations;
 
 namespace EmbeddedStock2
 {
@@ -85,6 +86,7 @@ namespace EmbeddedStock2
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
         }
     }
 }

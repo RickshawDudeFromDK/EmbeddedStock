@@ -7,6 +7,8 @@ using EmbeddedStock2.Models;
 using EmbeddedStock2.Repositories;
 using EmbeddedStock2.ViewModels;
 using EmbeddedStock2.Data;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
 
 namespace EmbeddedStock2.Controllers
 {
@@ -34,12 +36,13 @@ namespace EmbeddedStock2.Controllers
 
             using (var db = new ApplicationDbContext())
             {
-                ViewBag.list = db.Components.ToList<Component>();
+                ViewBag.list = db.Components.AsNoTracking().ToList<Component>();
             }
              
             return View();
         }
 
+        [Authorize]
         public IActionResult New()
         {
             var cat = new ComponentViewModel();
@@ -57,7 +60,8 @@ namespace EmbeddedStock2.Controllers
             ViewBag.list = _typeRepo.GetAll().ToList<ComponentType>();
             return View();
         }
-        
+
+        [Authorize]
         [HttpPost]
         public IActionResult Create(ComponentViewModel model)
         {
@@ -90,8 +94,8 @@ namespace EmbeddedStock2.Controllers
             using (var db = new ApplicationDbContext())
             {
 
-               comp = db.Components.Find(id);
-               com = db.ComponentTypes.Find(comp.ComponentTypeId);
+               comp = db.Components.Where(c => c.ComponentId == id).AsNoTracking().First();
+               com = db.ComponentTypes.Where(ct => ct.ComponentTypeId == comp.ComponentTypeId).AsNoTracking().First();
 
             }
 
@@ -101,6 +105,7 @@ namespace EmbeddedStock2.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpGet("[controller]/[action]/{id}")]
         public IActionResult Edit(int id)
         {
@@ -110,7 +115,7 @@ namespace EmbeddedStock2.Controllers
 
             using (var db = new ApplicationDbContext())
             {
-                comp = db.Components.Find(id);
+                comp = db.Components.Where(c => c.ComponentId == id).AsNoTracking().First();
             }
 
             compVM.ComponentId = comp.ComponentId;
@@ -127,17 +132,39 @@ namespace EmbeddedStock2.Controllers
             //com2.ComponentName = "hedsadasj";
             //com2.ComponentTypeId = 2;
             //cat.ComponentType = com;
-            ViewBag.list = _typeRepo.GetAll().ToList<ComponentType>();
+            ViewBag.list = _typeRepo.GetAll().ToList();
             return View(compVM);
         }
 
+        [Authorize]
         [HttpPost]
-        public IActionResult Update(CategoryViewModel model)
+        public IActionResult Update(Component model)
         {
-            //find category and update with new name and component types
+
+            var comp = new Component();
+
+            using (var db = new ApplicationDbContext())
+            {
+                comp = db.Components.Where(c => c.ComponentId == model.ComponentId).AsNoTracking().First();
+            }
+
+            if (comp != null)
+            {
+                comp.ComponentNumber = model.ComponentNumber;
+                comp.ComponentTypeId = model.ComponentTypeId;
+                comp.SerialNo = model.SerialNo;
+            }
+
+            using (var db = new ApplicationDbContext())
+            {
+                db.Entry(comp).State = EntityState.Modified;
+                db.SaveChanges();
+            }
+
             return RedirectToAction("", "component", new { area = "" });
         }
 
+        [Authorize]
         [HttpGet("[controller]/[action]/{id}")]
         public IActionResult Delete(int id)
         {

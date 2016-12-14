@@ -8,6 +8,7 @@ using EmbeddedStock2.Repositories;
 using EmbeddedStock2.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using EmbeddedStock2.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace EmbeddedStock2.Controllers
 {
@@ -33,6 +34,7 @@ namespace EmbeddedStock2.Controllers
             return View();
         }
 
+        [Authorize]
         public IActionResult New()
         { 
             var com = new ComponentType();
@@ -42,18 +44,16 @@ namespace EmbeddedStock2.Controllers
             ViewBag.list = _typeRepo.GetAll().ToList<ComponentType>();
             return View();
         }
-        
+        [Authorize]
         [HttpPost]
         public IActionResult Create(CategoryViewModel model)
-        { 
+        {
             //needs to create a category and create the binding to the chosen componenttypes
-           
+            var cat = new Category();
+            cat.Name = model.Name;
 
             using (var db = new ApplicationDbContext())
             {
-
-                var cat = new Category();
-                cat.Name = model.Name;
                 db.Categories.Add(cat);
 
 
@@ -67,7 +67,6 @@ namespace EmbeddedStock2.Controllers
                 
 
                 db.SaveChanges();
-
             }
 
 
@@ -91,7 +90,7 @@ namespace EmbeddedStock2.Controllers
            
                 tempList = db.CategoryComponentTypes.Include(ct => ct.ComponentType)
                              .Where(c => c.CategoryId == id)
-                             .Select(c => c.ComponentType)
+                             .Select(c => c.ComponentType).AsNoTracking()
                              .ToList();
 
                 cat = db.Categories.Find(id);
@@ -105,6 +104,7 @@ namespace EmbeddedStock2.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpGet("{category}/[action]/{id}")]
         public IActionResult Edit(int id)
         {
@@ -121,26 +121,33 @@ namespace EmbeddedStock2.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Update(CategoryViewModel model)
         {
+            var edit = new Category { CategoryId = model.Id, Name = model.Name };
+
             using (var db = new ApplicationDbContext())
             {
-                var edit = new Category { CategoryId = model.Id, Name = model.Name };
+                
                 db.Categories.Attach(edit);
                 var entry = db.Entry(edit);
                 entry.Property(e => e.Name).IsModified = true;
 
                 db.CategoryComponentTypes.RemoveRange(db.CategoryComponentTypes.Where(c => c.CategoryId == model.Id));
+                db.SaveChanges();
 
-                foreach (int id in model.ComponentTypeIds)
+                if (model.ComponentTypeIds != null)
                 {
+                    foreach (var id in model.ComponentTypeIds)
+                    {
 
-                    var type = db.ComponentTypes.Find(id);
-                    var cat = db.Categories.Find(model.Id);
+                        var type = db.ComponentTypes.Find(id);
+                        var cat = db.Categories.Find(model.Id);
 
-                    var cattyp = new CategoryComponentType() { Category = cat, ComponentType = type };
-                    db.CategoryComponentTypes.Add(cattyp);
+                        var cattyp = new CategoryComponentType() { Category = cat, ComponentType = type };
+                        db.CategoryComponentTypes.Add(cattyp);
+                    }
                 }
 
                 db.SaveChanges();
@@ -151,6 +158,7 @@ namespace EmbeddedStock2.Controllers
             return RedirectToAction("", "category", new { area = "" });
         }
 
+        [Authorize]
         [HttpGet("{category}/[action]/{id}")]
         public IActionResult Delete(int id)
         {

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EmbeddedStock2.Controllers
 {
+
     public class HomeController : Controller
     {
         public IActionResult Index()

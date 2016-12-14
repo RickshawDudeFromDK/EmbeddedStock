@@ -26,6 +26,7 @@ namespace EmbeddedStock2.Repositories
             string includeProperties = "")
         {
             IQueryable<TEntity> query = dbSet;
+            query.AsNoTracking();
 
             if (filter != null)
             {
@@ -55,7 +56,7 @@ namespace EmbeddedStock2.Repositories
 
         public IQueryable<TEntity> GetAll()
         {
-            return context.Set<TEntity>();
+            return context.Set<TEntity>().AsNoTracking();
         }
 
 
